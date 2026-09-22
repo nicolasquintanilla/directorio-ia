@@ -1,0 +1,55 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Cookies - Directorio de Herramientas IA</title>
+</head>
+<body class="bg-slate-50 min-h-screen font-sans text-gray-900 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-indigo-300 via-fuchsia-100 to-cyan-200 selection:bg-purple-300">
+  <Header />
+  
+  <main class="max-w-4xl mx-auto my-12 p-8 bg-white/60 backdrop-blur-sm rounded-2xl shadow-sm prose prose-gray text-gray-700 leading-relaxed">
+    <h1 class="text-3xl font-bold text-gray-900 mb-8 border-b pb-4 border-gray-200">Política de Cookies</h1>
+    
+    <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-4">1. ¿Qué son las cookies?</h2>
+    <p class="mb-4">
+      Una cookie es un pequeño archivo de texto que un sitio web guarda en su ordenador o dispositivo móvil cuando usted lo visita. Las cookies permiten a la página web recordar sus acciones y preferencias (como el inicio de sesión, el idioma, el tamaño de la fuente y otras preferencias de visualización) durante un período de tiempo, para que no tenga que volver a configurarlas cada vez que navegue entre nuestras páginas.
+    </p>
+    
+    <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-4">2. Tipos de cookies que utilizamos</h2>
+    <p class="mb-4">Este sitio web utiliza las siguientes tipologías de cookies:</p>
+    
+    <h3 class="text-lg font-medium text-gray-800 mt-6 mb-2">Cookies Técnicas (Propias)</h3>
+    <p class="mb-4">
+      Son aquellas que permiten al usuario la navegación fluida a través del sitio web y la utilización de las diferentes opciones que en ella existen. En concreto, utilizamos una cookie técnica de almacenamiento local (<code>localStorage</code>) denominada <code>cookies-preference</code> para guardar su decisión de aceptación o rechazo del banner de aviso, evitando así molestarlo con el mismo mensaje reiteradamente.
+    </p>
+    
+    <h3 class="text-lg font-medium text-gray-800 mt-6 mb-2">Cookies de Publicidad Comportamental (De Terceros)</h3>
+    <p class="mb-4">
+      Este sitio web se monetiza a través de Google AdSense, un servicio prestado por Google Ireland Limited. AdSense emplea tecnologías de rastreo y cookies para mostrar anuncios relevantes basados en las visitas anteriores que el usuario haya realizado a este sitio o a otros sitios de la red. Puede obtener más información o inhabilitar la publicidad personalizada gestionando la Configuración de Anuncios directamente en su cuenta de Google.
+    </p>
+    
+    <h2 class="text-xl font-semibold text-gray-900 mt-8 mb-4">3. Gestión, revocación y desactivación</h2>
+    <p class="mb-4">
+      Usted puede permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones de privacidad del navegador que utilice. Si rechaza las cookies, podrá seguir usando nuestro directorio, aunque es posible que no podamos guardar sus preferencias.
+    </p>
+    <p class="mb-4">A continuación, enlazamos las guías de configuración para los navegadores más utilizados del mercado:</p>
+    <ul class="list-disc pl-6 mb-4 space-y-2">
+      <li><strong>Google Chrome:</strong> Configuración &gt; Privacidad y seguridad &gt; Cookies y otros datos de sitios.</li>
+      <li><strong>Mozilla Firefox:</strong> Ajustes &gt; Privacidad &amp; Seguridad &gt; Cookies y datos del sitio.</li>
+      <li><strong>Safari:</strong> Preferencias &gt; Privacidad.</li>
+      <li><strong>Microsoft Edge:</strong> Configuración &gt; Privacidad, búsqueda y servicios &gt; Borrar datos de exploración.</li>
+    </ul>
+    
+    <p class="mt-8 text-sm text-gray-500 italic">Última actualización: Septiembre de 2026</p>
+  </main>
+
+  <Footer />
+</body>
+</html>

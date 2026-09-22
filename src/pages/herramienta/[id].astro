@@ -1,0 +1,97 @@
+---
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import AdSenseCard from '../../components/AdSenseCard.astro';
+import CookieBanner from '../../components/CookieBanner.astro';
+import toolsData from '../../data/tools.json';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return toolsData.map(tool => ({
+    params: { id: tool.tool_id },
+    props: { tool },
+  }));
+}
+
+const { tool } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{tool.name} - Análisis Detallado | Directorio IA</title>
+    <meta name="description" content={tool.short_description} />
+  </head>
+  <body class="bg-slate-50 min-h-screen font-sans text-gray-900 bg-[radial-gradient(circle_at_top_left,_var(--tw-gradient-stops))] from-indigo-300 via-fuchsia-100 to-cyan-200 selection:bg-purple-300">
+    <Header />
+    
+    <main class="max-w-4xl mx-auto py-12 px-6">
+      
+      <!-- Cabecera de la Herramienta -->
+      <header class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
+        <div class="w-24 h-24 bg-white p-2 shadow-sm rounded-2xl flex-shrink-0 ring-1 ring-gray-900/10">
+          <img src={tool.logo_url} alt={`Logotipo de ${tool.name}`} class="w-full h-full object-contain rounded-xl" />
+        </div>
+        <div class="flex-grow">
+          <h1 class="text-4xl font-bold text-gray-900 tracking-tight mb-3">{tool.name}</h1>
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-blue-100 text-blue-800 tracking-wide uppercase">
+              {tool.category}
+            </span>
+            <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-bold bg-green-100 text-green-800 tracking-wide uppercase">
+              {tool.pricing_model}
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Descripción Corta -->
+      <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+        {tool.short_description}
+      </p>
+
+      <!-- ZONA DE ANUNCIO 1 -->
+      <div class="w-full mb-8">
+        <AdSenseCard />
+      </div>
+
+      <!-- Análisis Detallado -->
+      <section class="bg-white rounded-2xl p-8 shadow-sm my-8 border border-gray-100">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-4">Análisis Detallado</h2>
+        <div class="prose text-gray-700 leading-loose max-w-none mb-8">
+          <p>{tool.long_description}</p>
+        </div>
+        
+        <h3 class="text-xl font-bold text-gray-900 mb-4">Casos de Uso Principales</h3>
+        <ul class="list-disc pl-6 space-y-3 prose text-gray-700 leading-loose">
+          <li><strong>Automatización de procesos repetitivos:</strong> Ideal para reducir la carga de trabajo manual en tareas operativas diarias, permitiendo al equipo enfocarse en labores estratégicas de alto valor.</li>
+          <li><strong>Análisis y toma de decisiones B2B:</strong> Facilita la extracción de insights accionables a partir de grandes volúmenes de datos, acelerando el ciclo de ventas y mejorando la conversión corporativa.</li>
+          <li><strong>Integración en flujos de trabajo existentes:</strong> Diseñada para conectarse de forma transparente con el ecosistema de software actual de tu empresa, minimizando la curva de aprendizaje de los empleados.</li>
+        </ul>
+      </section>
+
+      <!-- ZONA DE ANUNCIO 2 -->
+      <div class="w-full my-8">
+        <AdSenseCard />
+      </div>
+
+      <!-- Botón de Llamada a la Acción -->
+      <div class="flex justify-center mt-12 mb-8">
+        <a 
+          href={tool.website_url} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-extrabold text-lg py-4 px-10 rounded-2xl shadow-xl transition-transform transform hover:scale-105"
+        >
+          Visitar Web Oficial de {tool.name}
+        </a>
+      </div>
+
+    </main>
+
+    <Footer />
+    <CookieBanner />
+  </body>
+</html>

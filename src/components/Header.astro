@@ -1,0 +1,56 @@
+---
+---
+
+<header class="bg-slate-900 border-b border-slate-800 sticky top-0 z-50 shadow-2xl">
+  <!-- Fila 1: Navegación Principal -->
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="w-10 h-10 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 shadow-md flex-shrink-0 transform group-hover:scale-105 transition-transform duration-300">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+      </div>
+      <span class="text-2xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+        Directorio IA
+      </span>
+    </a>
+    <a href="/" class="bg-white/10 hover:bg-white/20 text-white px-5 py-2 rounded-xl font-semibold transition-all backdrop-blur-sm">
+      Inicio
+    </a>
+  </div>
+
+  <!-- Fila 2: Categorías Funcionales con efecto Neón -->
+  <div class="bg-slate-950 relative overflow-hidden">
+    <!-- Efecto pulse de fondo animado -->
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-purple-900/20 to-blue-900/10 animate-pulse pointer-events-none"></div>
+    
+    <nav class="relative max-w-7xl mx-auto flex justify-center gap-4 md:gap-6 py-3 px-6 overflow-x-auto scrollbar-hide">
+      <a href="/categoria/generacion-de-texto" class="text-sm font-medium text-slate-400 hover:text-blue-300 hover:bg-blue-600/30 px-4 py-1.5 rounded-lg transition-all duration-300 whitespace-nowrap">
+        Generación de Texto
+      </a>
+      <a href="/categoria/imagen-y-diseno" class="text-sm font-medium text-slate-400 hover:text-blue-300 hover:bg-blue-600/30 px-4 py-1.5 rounded-lg transition-all duration-300 whitespace-nowrap">
+        Imagen y Diseño
+      </a>
+      <a href="/categoria/audio-y-video" class="text-sm font-medium text-slate-400 hover:text-blue-300 hover:bg-blue-600/30 px-4 py-1.5 rounded-lg transition-all duration-300 whitespace-nowrap">
+        Audio y Vídeo
+      </a>
+      <a href="/categoria/desarrollo-y-codigo" class="text-sm font-medium text-slate-400 hover:text-blue-300 hover:bg-blue-600/30 px-4 py-1.5 rounded-lg transition-all duration-300 whitespace-nowrap">
+        Desarrollo y Código
+      </a>
+      <a href="/categoria/productividad" class="text-sm font-medium text-slate-400 hover:text-blue-300 hover:bg-blue-600/30 px-4 py-1.5 rounded-lg transition-all duration-300 whitespace-nowrap">
+        Productividad
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  /* Ocultar barra de desplazamiento manteniendo funcionalidad táctil */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>

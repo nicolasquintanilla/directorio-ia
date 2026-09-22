@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f8fafc;
+  background-image: radial-gradient(circle at top left, var(--tw-gradient-stops));
+  --tw-gradient-from: #a5b4fc;
+  --tw-gradient-via: #fae8ff;
+  --tw-gradient-to: #a5f3fc;
+  min-height: 100vh;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  color: #111827;
+}
